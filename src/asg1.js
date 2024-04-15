@@ -102,6 +102,7 @@ function addActionsForHtmlUI() {
   document.getElementById("clear_button").onclick = function () {
     g_shapesList = [];
     renderAllShapes();
+    picture.style = "display:none";
   };
   document.getElementById("point_button").onclick = function () {
     g_selectedType = POINT;
@@ -112,10 +113,13 @@ function addActionsForHtmlUI() {
   document.getElementById("circle_button").onclick = function () {
     g_selectedType = CIRCLE;
   };
+  let picture = document.getElementById("picture");
+
   document.getElementById("picture_button").onclick = function () {
     g_shapesList = [];
     renderAllShapes();
     drawPicture();
+    picture.style = "block";
   };
 }
 
