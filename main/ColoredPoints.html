@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+  
+  <body onload="main()">
+    <div>
+      <canvas id="webgl" width="400" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+    </div>
+    <div>
+      <p id="performance_text">O.O</p>
+    </div>
+    <div>
+      <div>
+        <button type="button" id="clear_button">Clear</button>
+        <button type="button" id="picture_button">Draw a Picture</button>
+      </div>
+      <div style="margin-top: 1rem;">
+        <button type="button" id="point_button">Point</button>
+        <button type="button" id="triangle_button">Triangle</button>
+        <button type="button" id="circle_button">Circle</button>
+      </div>
+      <div style="margin-top: 1rem;">
+        <label for="red_input">Red:</label>
+        <input id="red_input" type="range" min="0" max="100" value="100" class="slider"/>
+        <label for="green_input">Green:</label>
+        <input id="green_input" type="range" min="0" max="100" value="0" class="slider"/>
+        <label for="blue_input">Blue:</label>
+        <input id="blue_input" type="range" min="0" max="100" value="0" class="slider"/>
+      </div>
+      <div>
+        <label for="size_input">Size:</label>
+        <input id="size_input" type="range" min="5" max="80" value="0" class="slider"/>
+        <label for="segment_input">Segments:</label>
+        <input id="segment_input" type="range", min="7", max="20" value="0" class="slider"/>
+      </div>
+
+    </div>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Points.js"></script>
+    <script src="Circle.js"></script>
+    <script src="ColoredPoints.js"></script>
+  </body>
+</html>
